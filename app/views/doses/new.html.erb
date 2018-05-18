@@ -1,12 +1,22 @@
-
-<div class="container">
-  <%= simple_form_for [@cocktail, @dose] do |d| %>
-    <div class="ingredients-list">
-      <%= d.association :ingredient, as: :select %>
-    </div>
-    <%= d.input :description %>
-    <%= d.submit "Swish Swish", class: "btn btn-primary" %>
-  <% end %>
+<div class="navbar-wagon">
+  <div class="navbar-wagon-right hidden-xs hidden-sm">
+    <a href=<%= cocktails_path%> class="navbar-wagon-item navbar-wagon-link">Home</a>
+    <a href=<%= new_cocktail_path%> class="navbar-wagon-item navbar-wagon-link">Craft</a>
+    <a href="" class="navbar-wagon-item navbar-wagon-link">Ingredients</a>
+  </div>
 </div>
 
+<div id="new-dose-background">
+  <div class="container dose-form-div">
+    <div class="dose-form">
+      <%= simple_form_for [@cocktail, @dose] do |d| %>
+        <div class="ingredients-list">
+          <%= d.association :ingredient, as: :select %>
+        </div>
+        <%= d.input :description, label: 'How much of that?'%>
+        <%= d.submit "Swish Swish", class: "btn btn-dose" %>
+      <% end %>
+    </div>
+  </div>
+</div>
 

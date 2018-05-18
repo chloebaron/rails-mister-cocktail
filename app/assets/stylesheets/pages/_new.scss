@@ -1,4 +1,38 @@
+#new-cocktail-background {
+  background-image: url("alt_form_background.jpg");
+  background-size: cover;
+  height: calc(100vh - 70px);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.cocktail-form-div {
+  background-color: rgba(200,200,200,0.3);
+  padding: 40px 20px;
+  width: calc(100% / 3);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
 #cocktail_name {
-  width: 200px;
+  width: 300px;
   margin-bottom: 10px;
+}
+
+#new-cocktail {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.btn-cocktail {
+  background-color: $charcoal;
+  color: white;
+}
+
+.cocktail_name {
+  color: white;
+  font-size: 32px;
 }

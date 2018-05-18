@@ -1,6 +1,5 @@
 
 <div class="navbar-wagon">
-  <!-- Right Navigation -->
   <div class="navbar-wagon-right hidden-xs hidden-sm">
 
     <a href=<%= cocktails_path%> class="navbar-wagon-item navbar-wagon-link">Home</a>
@@ -9,16 +8,23 @@
   </div>
 </div>
 <div class="container">
-  <h1> <%= @cocktail.name %> </h1>
-    <% @cocktail.doses.each do |dose| %>
-      <h3><%= dose.description %></h3>
-      <h3><%= dose.ingredient.name %></h3>
-      <%= link_to cocktail_dose_path(@cocktail, dose), method: :delete, data: { confirm: "Are you sure?" } do %>
-        <i class="fa fa-trash-o" aria-hidden="true"></i>
+  <div>
+    <dl class="cocktail-name"> <%= @cocktail.name %>
+      <% @cocktail.doses.each do |dose| %>
+        <dt class="dose-ingredient"><%= dose.ingredient.name %></dt>
+        <dd class="dose-description"><%= dose.description %></dd>
+        <%= link_to cocktail_dose_path(@cocktail, dose), method: :delete do %>
+          <i class="fa fa-trash-o" aria-hidden="true"></i>
+        <% end %>
       <% end %>
-    <% end %>
-  <p><%= link_to "Add an ingredient", new_cocktail_dose_path(@cocktail) %></p>
+    </dl>
+  </div>
+  <div>
+    <h3><%= link_to "Add an ingredient", new_cocktail_dose_path(@cocktail) %></h3>
+  </div>
 </div>
+
+
 
 
 

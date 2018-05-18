@@ -1,3 +1,44 @@
-.ingredients-list {
+#new-dose-background {
+  background-image: url("alt_form_background.jpg");
+  background-size: cover;
+  height: calc(100vh - 70px);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
 
+.dose-form {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+#dose_name {
+  width: 300px;
+  margin-bottom: 10px;
+}
+
+.dose-form-div {
+  background-color: rgba(200,200,200,0.3);
+  padding: 40px 20px;
+  width: calc(100% / 3);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+
+}
+
+.btn-dose {
+  background-color: $charcoal;
+  color: white;
+}
+
+// .dose_name {
+//   color: white;
+//   font-size: 32px;
+// }
+
+label {
+  color: white;
+  font-size: 32px;
 }
