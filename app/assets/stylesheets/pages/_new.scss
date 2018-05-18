@@ -7,6 +7,12 @@
   align-items: center;
 }
 
+.cocktail-form {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
 .cocktail-form-div {
   background-color: rgba(200,200,200,0.3);
   padding: 40px 20px;
@@ -29,6 +35,13 @@
 
 .btn-cocktail {
   background-color: $charcoal;
+  color: white;
+  border-radius: 10px;
+  font-weight: bold;
+}
+
+.btn-cocktail:hover {
+  background-color: rgb(50,50,50);
   color: white;
 }
 
