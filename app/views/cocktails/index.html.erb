@@ -6,17 +6,29 @@
 </div>
 
 <div class="container">
-    <div class="index-action-about">
-      <btn class="btn-add"><%= link_to "Craft a drink.",new_cocktail_path %> </btn>
-      <div class="about-paragraph">
-        <p> Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.</p>
+  <div class="index-action-about">
+    <btn class="btn-add"><%= link_to "Craft a drink.",new_cocktail_path %> </btn>
+    <div class="about-paragraph">
+      <p> Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.</p>
 
-        <p> Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. </p>
-      </div>
+      <p> Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. </p>
     </div>
+  </div>
+</div>
+<div class="container">
     <div class="index-drink-cards">
       <% @cocktails.each do |cocktail| %>
-      <h3> <%= link_to cocktail.name, cocktail_path(cocktail) %> </h3>
+      <div class="row">
+        <div class="col-xs-12 col-sm-4">
+          <div class="card">
+          <div class="card-description">
+            <h2><%= link_to cocktail.name, cocktail_path(cocktail) %></h2>
+          </div>
+          <a class="card-link" href="<% link_to cocktail_path(cocktail) %>"></a>
+          </div>
+        </div>
       <% end %>
     </div>
+  </div>
 </div>
+

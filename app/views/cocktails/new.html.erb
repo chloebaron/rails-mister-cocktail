@@ -1,10 +1,17 @@
-<div class="container">
-  <%= simple_form_for [@cocktail] do |c| %>
-    <%= c.input :name %>
-    <%= c.submit "Swish Swish", class: "btn btn-primary" %>
-  <% end %>
+<div class="navbar-wagon">
+  <div class="navbar-wagon-right hidden-xs hidden-sm">
 
-  <h3><%= link_to "Add an ingredient", new_cocktail_dose_path</h3>
+    <a href=<%= cocktails_path%> class="navbar-wagon-item navbar-wagon-link">Home</a>
+    <a href=<%= new_cocktail_path%> class="navbar-wagon-item navbar-wagon-link">Craft</a>
+    <a href="" class="navbar-wagon-item navbar-wagon-link">Ingredients</a>
+  </div>
 </div>
 
-
+<div class="container">
+  <div class="cocktail-form">
+    <%= simple_form_for [@cocktail] do |f| %>
+      <%= f.input :name %>
+      <%= f.submit "Swish Swish", class: "btn btn-cocktail" %>
+    <% end %>
+  </div>
+</div>
