@@ -1,12 +1,39 @@
-.container {
-  position: relative;
-  // top: 70px;
+// .container {
+//   width: 100%;
+//   display: flex;
+//   justify-content: space-between;
+//   align-items: center;
+// }
+
+#show-cocktail-background {
+  background-image: url("form_background.jpg");
+  background-size: cover;
+  height: 100vh;
+}
+
+.show-content {
+  height: 90vh;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin: 10px 50px;
+}
+
+.cocktail-details {
+  text-align: right;
+  flex: 0 0 30%;
+}
+
+.ingredients-list {
+  margin-right: 0;
+  margin-left: auto;
 }
 
 .cocktail-name {
   font-size: 48px;
   font-weight: bold;
   color: white;
+  text-align: right;
 }
 
 .dose-ingredient {
@@ -15,6 +42,7 @@
   color: white;
   padding: 5px;
   padding-left: 0;
+  text-align: right;
 }
 
 .dose-description {
@@ -30,15 +58,6 @@ a .fa-trash-o {
   font-size: 32px;
   color: white;
   padding: 5px;
-}
-
-#show-cocktail-background {
-  background-image: url("form_background.jpg");
-  background-size: cover;
-  height: 100vh;
-  display: flex;
-  justify-content: left;
-  align-items: center;
 }
 
 .btn-add-ingredient a {

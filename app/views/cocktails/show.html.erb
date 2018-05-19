@@ -1,16 +1,16 @@
-<div class="navbar-wagon">
-  <div class="navbar-wagon-right hidden-xs hidden-sm">
-    <a href=<%= cocktails_path%> class="navbar-wagon-item navbar-wagon-link">Home</a>
-    <a href=<%= new_cocktail_path%> class="navbar-wagon-item navbar-wagon-link">Craft</a>
-    <a href="" class="navbar-wagon-item navbar-wagon-link">Ingredients</a>
-  </div>
-</div>
-
 <div id="show-cocktail-background">
-  <div class="container show-div">
-    <table class="ingredients-list">
-      <h3 class="cocktail-name"><%= @cocktail.name %></h3>
-      <% @cocktail.doses.each do |dose| %>
+  <div class="navbar-wagon">
+    <div class="navbar-wagon-right hidden-xs hidden-sm">
+      <a href=<%= cocktails_path%> class="navbar-wagon-item navbar-wagon-link">Home</a>
+      <a href=<%= new_cocktail_path%> class="navbar-wagon-item navbar-wagon-link">Craft</a>
+      <a href="" class="navbar-wagon-item navbar-wagon-link">Ingredients</a>
+    </div>
+  </div>
+  <div class="show-content">
+    <div class="cocktail-details">
+      <h2 class="cocktail-name"><%= @cocktail.name %></h2>
+      <table class="ingredients-list">
+        <% @cocktail.doses.each do |dose| %>
         <tr>
           <td class="dose-ingredient"><%= dose.ingredient.name %> |</td>
           <td class="dose-description"><%= dose.description %></td>
@@ -18,10 +18,14 @@
             <i class="fa fa-trash-o" aria-hidden="true"></i></td>
           <% end %>
         </tr>
-      <% end %>
-    </table>
-    <div>
-    <btn class="btn-add-ingredient"><%= link_to "Add an ingredient", new_cocktail_dose_path(@cocktail) %></btn>
+        <% end %>
+      </table>
+      <div>
+      <btn class="btn-add-ingredient"><%= link_to "Add an ingredient", new_cocktail_dose_path(@cocktail) %></btn>
+      </div>
+    </div>
+    <div class="ingredient-form">
+      <%= render 'doses/form' %>
     </div>
   </div>
 </div>

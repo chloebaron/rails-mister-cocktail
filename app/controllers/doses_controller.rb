@@ -1,9 +1,9 @@
 class DosesController < ApplicationController
-  def new
-    # we need @restaurant in our `simple_form_for`
-    @cocktail = Cocktail.find(params[:cocktail_id])
-    @dose = Dose.new
-  end
+  # def new
+  #   # we need @restaurant in our `simple_form_for`
+  #   @cocktail = Cocktail.find(params[:cocktail_id])
+  #   @dose = Dose.new
+  # end
 
   def create
     @cocktail = Cocktail.find(params[:cocktail_id])
