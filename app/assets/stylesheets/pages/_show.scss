@@ -12,7 +12,7 @@
 }
 
 .show-content {
-  height: 90vh;
+  height: 80vh;
   display: flex;
   justify-content: space-between;
   align-items: center;
@@ -27,6 +27,7 @@
 .ingredients-list {
   margin-right: 0;
   margin-left: auto;
+  white-space: nowrap;
 }
 
 .cocktail-name {
