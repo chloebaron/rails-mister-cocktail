@@ -7,15 +7,18 @@
   align-items: center;
 }
 
-.cocktail-form {
+form #new-cocktail {
+  display: flex;
   display: flex;
   justify-content: center;
   align-items: center;
 }
 
-.cocktail-form-div {
-  background-color: rgba(200,200,200,0.3);
-  padding: 40px 20px;
+.cocktail-form {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  padding: 10px 20px;
   width: calc(100% / 3);
   display: flex;
   justify-content: center;

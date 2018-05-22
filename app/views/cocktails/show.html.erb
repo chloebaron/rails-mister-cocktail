@@ -1,11 +1,5 @@
 <div id="show-cocktail-background">
-  <div class="navbar-wagon">
-    <div class="navbar-wagon-right hidden-xs hidden-sm">
-      <a href=<%= cocktails_path%> class="navbar-wagon-item navbar-wagon-link">Home</a>
-      <a href=<%= new_cocktail_path%> class="navbar-wagon-item navbar-wagon-link">Craft</a>
-      <a href="" class="navbar-wagon-item navbar-wagon-link">Ingredients</a>
-    </div>
-  </div>
+  <%= render 'shared/navbar' %>
   <div class="show-content">
     <div class="cocktail-details">
       <h2 class="cocktail-name"><%= @cocktail.name %></h2>
@@ -20,9 +14,6 @@
         </tr>
         <% end %>
       </table>
-      <div>
-      <btn class="btn-add-ingredient"><%= link_to "Add an ingredient", new_cocktail_dose_path(@cocktail) %></btn>
-      </div>
     </div>
     <div class="ingredient-form">
       <%= render 'doses/form' %>
